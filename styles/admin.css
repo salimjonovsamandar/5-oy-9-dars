@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: black;
+  margin-top: 20px;
+  font-size: 50px;
+  }
+  #deletebtn{
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+
+  }
+#updatebtn{
+    font-size: 20px;
+    cursor: pointer;
+}
+td{
+    height: 30px;
+    text-align: center;
+}
+th{
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}

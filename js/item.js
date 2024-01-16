@@ -11,7 +11,6 @@ function createHtml(data) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // console.log(window.location.href.substring(40));
   let elId = window.location.href.substring(42);
   if (elId && elId.length == 36) {
     fetch(`https://auth-rg69.onrender.com/api/products/${elId}`)

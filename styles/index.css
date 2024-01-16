@@ -5,8 +5,16 @@
 }
 body {
   font-family: sans-serif;
-  background-color: rgb(255, 255, 255);
+  
 }
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: black;
+  margin-top: 20px;
+  font-size: 50px;
+  }
+
 .container {
   color: rgb(3, 2, 2);
   position: relative;
