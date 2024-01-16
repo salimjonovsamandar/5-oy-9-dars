@@ -11,7 +11,6 @@ function createCard(phone) {
             </div>
     `;
 }
-
 document.addEventListener("DOMContentLoaded", function () {
   fetch("https://auth-rg69.onrender.com/api/products/all", {
       method: "GET",
@@ -30,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             buttun.addEventListener("click", function () {
               let elID = this.getAttribute("id").substring(11);
               if (elID) {
+                window.location.href= 
                 window.location.assign(
                   `http://127.0.0.1:5500/pages/item.html?id=${elID}`
                 );

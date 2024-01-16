@@ -22,9 +22,57 @@
 
   <body>
     <h1>Admin Sahifa</h1>
+    <div class="block">
+      <div class="form_area">
+        <p class="title">ADD PRODUCT</p>
+        <form action="">
+          <div class="form_group">
+            <label class="sub_title" for="name">Name</label>
+            <input
+              placeholder="Enter your full name"
+              class="form_style"
+              type="text"
+              id="name"
+            />
+          </div>
+
+          <div class="form_group">
+            <label class="sub_title" for="price">Price</label>
+            <input
+              placeholder="Enter your price"
+              id="price"
+              class="form_style"
+              type="number"
+            />
+          </div>
+
+          <div class="form_group">
+            <label class="sub_title" for="description">Description</label>
+            <input
+              placeholder="Enter your description"
+              id="description"
+              class="form_style"
+              type="text"
+            />
+          </div>
+
+          <div class="form_group">
+            <label class="sub_title" for="password">Password</label>
+            <select class="form-select form_style">
+              <option>Samsung</option>
+              <option>Iphone</option>
+              <option>Redmi</option>
+              <option>Honor</option>
+            </select>
+          </div>
+          <div>
+            <button class="btn">SAVE</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <div class="container mt-3">
-     
       <table class="table">
         <thead class="table-dark">
           <tr>
@@ -37,22 +85,8 @@
             <th>Amallar</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Iphone</td>
-            <td>200</td>
-            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-            <td>1</td>
-            <td>Aktiv</td>
-            <td> <i id="updatebtn" class="bi bi-pen text-danger"></i> <i class="bi bi-trash3 text-success" id="deletebtn"></i></td>
-          </tr>
-        </tbody>
-
-        
+        <tbody id="tbody"></tbody>
       </table>
-
-      
     </div>
 
     <script
