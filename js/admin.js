@@ -16,7 +16,7 @@ function createRov(phone, index) {
 <td>${phone.description}</td>
 <td>${phone.category_id}</td>
 <td>${phone.status}</td>
-<td>
+<td data-id= "${phone.id}" >
   <i id="updatebtn" class="bi bi-pen text-danger"></i>
   <i class="bi bi-trash3 text-success" id="deletebtn"></i>
 </td>
@@ -74,6 +74,35 @@ document.addEventListener("DOMContentLoaded", function () {
           let tr = createRov(phone, index + 1);
           tbody.innerHTML += tr;
         });
+
+        const deletebtn = document.querySelectorAll("#deletebtn");
+        if (deletebtn.length) {
+          deletebtn.forEach((del) => {
+            del.addEventListener("click", function () {
+              let isDelete = confirm("Rosdan ham o'chirmoqchimisiz");
+              if (isDelete) {
+                let deleteId = this.parentNode.getAttribute("data-id");
+                if (deleteId) {
+                  fetch(
+                    `https://auth-rg69.onrender.com/api/products/${deleteId}`,
+                    {
+                      method: "DELETE",
+                    }
+                  )
+                    .then((res) => res.json())
+                    .then((data) => {
+                      if (data.massage) {
+                        window.location.reload();
+                      }
+                    })
+                    .catch((err) => {
+                      console.log(err);
+                    });
+                }
+              }
+            });
+          });
+        }
       }
     })
     .catch((err) => {
